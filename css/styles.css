@@ -29,13 +29,11 @@ p,h1,h2,h3{
     margin: 0;
 }
 .container{
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
-
-
 .switch {
     position: relative;
     display: inline-block;
@@ -181,6 +179,11 @@ p,h1,h2,h3{
     flex-flow: column wrap;
     height: 100%;
     min-height: inherit;
+    position: relative;
+}
+.modal-wrap p{
+    text-align: center;
+    padding: 20px;
 }
 .modal-back{
     position: fixed;
@@ -193,7 +196,20 @@ p,h1,h2,h3{
 .modal-hidden {
     display: none;
 }
-
+span.modal-close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+span.modal-close:after{
+    content: '';
+    right: 0px;
+    top: 0px;
+    background-image: url("/images/delete.svg");
+    position: absolute;
+    height: 10px;
+    width: 10px;
+}
 
 
 
@@ -205,6 +221,7 @@ p,h1,h2,h3{
     font-size: 12px;
     display: block;
     color: #707070;
+
 }
 .subcategories div:first-child{
     padding: 5px 40px 5px 20px;
@@ -235,23 +252,13 @@ p,h1,h2,h3{
 }
 .details{
     position: absolute;
-    top: 22px;
+    top: 4px;
     left: 420px;
     font-size: 14px;
     color:var(--blue);
     cursor: pointer;
 }
-.details:after{
-    content: '';
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("/images/info.svg");
-    position: relative;
-    height: 16px;
-    width: 16px;
 
-}
 .form-button{
     margin: 20px 0
 }
@@ -272,24 +279,31 @@ p,h1,h2,h3{
     color: white;
 }
 .categories{
-    margin-top: 60px;
+    margin-bottom: 70px;
 }
 .categories-title{
     font-weight: bold;
+    display: block;
+    margin-bottom: 40px;
 }
 .categories-title-sub{
     font-size: 14px;
     font-weight: bold;
+    margin: 50px 0 20px;
 }
 .categories-item{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     position: relative;
-    margin: 30px 0;
+    margin-bottom: 20px;
     font-size: 16px;
+    height: 40px;
 }
-.categories-item > *{
+.categories-sub{
+    margin-bottom: 15px;
+}
+.categories-item > * {
     width: 50%;
 }
 .categories-part{
@@ -304,7 +318,10 @@ p,h1,h2,h3{
 .categories-part> p{
     max-width: 60%;
 }
-
+.subcategories-title{
+    display: block;
+    margin-bottom: 5px;
+}
 
 .note{
     font-size: 14px;
@@ -314,8 +331,8 @@ p,h1,h2,h3{
     width: 202px;
     padding: 10px;
     position: absolute;
-    top: -15px;
-    right: -210px;
+    top: -19px;
+    right: -220px;
     text-align: center;
     display: none;
 }
@@ -339,18 +356,138 @@ p,h1,h2,h3{
     top: 12px;
     left: 160px;
 }
+.note-icon:after{
+    content: '';
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("/images/info.svg");
+    position: absolute;
+    height: 16px;
+    width: 16px;
+}
 .note-icon:hover .note{
     display: block;
 }
 .title{
     font-size: 60px;
     font-family: var(--inter),Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     margin: 20px 0;
 }
 .desc{
     font-size: 22px;
     font-family: var(--inter),Arial, Helvetica, sans-serif;
     font-weight: 500;
-    margin: 20px 0;
+    margin-bottom: 50px;
 }
+
+@media only screen and ( max-width: 1120px){
+    .details{
+        left: 0;
+        top: -10px;
+        font-size: 10px;
+    }
+    .subcategories{
+        margin: 5px;
+    }
+    .subcategories-title{
+        margin-bottom: 10px;
+    }
+}
+@media only screen and ( max-width: 1024px){
+    .categories-item{
+        height: auto;
+    }
+    .categories-sub{
+        flex-wrap: wrap;
+    }
+
+    .subcategories div:first-child{
+        margin: 0 10px 5px 0;
+    }
+}
+@media only screen and ( max-width: 768px){
+    .title{
+        font-size: 40px;
+    }
+    .desc{
+        font-size: 18px;
+    }
+    .categories-item{
+        height: auto;
+    }
+}
+@media only screen and ( max-width: 580px){
+    * {
+        font-size: 14px;
+    }
+    .categories-part{
+        width: 70%;
+    }
+    .select{
+        width: 160px;
+    }
+}
+@media only screen and ( max-width: 480px) {
+    .select {
+        width: 110px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .select-head:after {
+        right: 5px;
+    }
+
+    .subcategories div:first-child {
+        margin: 0 0 3px 0;
+        padding: 5px 20px 5px 5px;
+    }
+
+    .subcategories-remove:after {
+        right: 5px;
+    }
+
+    .categories-item {
+        margin-bottom: 10px;
+    }
+
+    .subcategories {
+        margin: 0;
+    }
+
+    .subcategories-title {
+        margin-bottom: 20px;
+    }
+     .details{
+         top: -17px;
+     }
+    .categories-part> p{
+        font-size: 10px;
+    }
+    .categories{
+        margin-bottom: 50px;
+    }
+    .form-button div {
+        padding: 8px;
+        width: 115px;
+    }
+
+    .note-icon{
+        right: 0;
+        top: 30px;
+        left: 0;
+    }
+    .note-icon:after{
+        right: 0;
+    }
+}
+
+
