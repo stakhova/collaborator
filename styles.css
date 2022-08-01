@@ -205,7 +205,7 @@ span.modal-close:after{
     content: '';
     right: 0px;
     top: 0px;
-    background-image: url("../images/delete.svg");
+    background-image: url("images/delete.svg");
     position: absolute;
     height: 10px;
     width: 10px;
@@ -241,7 +241,7 @@ span.modal-close:after{
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("../images/delete.svg");
+    background-image: url("images/delete.svg");
     position: absolute;
     height: 10px;
     width: 10px;
@@ -361,7 +361,7 @@ span.modal-close:after{
     right: -5px;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("../images/info.svg");
+    background-image: url("images/info.svg");
     position: absolute;
     height: 16px;
     width: 16px;
