@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="title">Управление рассылками</h1>
+            <p class="desc">Здравствуйте, Андрей. Выберите, категории писем, от которых хотите отписаться. <br> Но пожалуйста, исключите только те категории, которые действительно вас не интересуют.
+                <br> Мы обещаем слать только полезные письма где 😊</p>
+            <form action="">
+                <div class="categories">
+                    <div class="categories-title">Общие уведомления</div>
+                    <div class="categories-item">
+                        <span>Приветственная серия</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <p>4 полезных и емких письма в течение месяца</p>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <span>Образовательные вебинары</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <p>Бесплатные вебинары проходят 1 раз в 2 недели. Вы будете получать 2 письма с напоминанием о предстоящем вебинаре</p>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <span>Личные сообщения</span>
+                        <div class="note-icon">
+                            +
+                            <div class="note">Письма об обновлениях и улучшениях платформы</div>
+                        </div>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <div class="select">
+                                <div class="select-head" data-type="firstOpt">Мгновенно</div>
+                                <div class="select-dropdown">
+                                    <div class="select-option" data-type="firstOpt">Мгновенно</div>
+                                    <div class="select-option" data-type="secondOpt">1 раз в день</div>
+                                    <div class="select-option" data-type="thirdOpt">Отключить</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <div class="categories-title">Уведомление по Сайтам</div>
+                    <div class="categories-item">
+                        <span>Новости</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="categories-title-sub">Поисковые агенты</div>
+                    <div class="categories-item">
+                        <div>
+                            <span>Бизнес</span>
+                            <div class="categories-sub">
+                                <div class="flex">
+                                    <div class="subcategories">
+                                        <div>Seo</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <div class="subcategories">
+                                        <div>Продвижение</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <div class="subcategories">
+                                        <div>Аналитика</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <span class="modal-btn details" data-modal="#modal-2">Детали</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <p>Поисковый агент присылает 1 письмо в неделю и только при условии, что найдены новые площадки</p>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <div>
+                            <span>123</span>
+                            <div class="categories-sub">
+                                <div class="flex">
+                                    <div class="subcategories">
+                                        <div>Seo</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <div class="subcategories">
+                                        <div>Продвижение</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <span class="modal-btn details" data-modal="#modal-2">Детали</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <div>
+                            <span>SEO</span>
+                            <div class="categories-sub">
+                                <div class="flex">
+                                    <div class="subcategories">
+                                        <div>Seo</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <div class="subcategories">
+                                        <div>Продвижение</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <div class="subcategories">
+                                        <div>Аналитика</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <span class="modal-btn details" data-modal="#modal-2">Детали</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <div>
+                            <span>Бурж ссылки</span>
+                            <div class="categories-sub">
+                                <div class="flex">
+                                    <div class="subcategories">
+                                        <div>Биржи ссылок: Не обнаружен</div>
+                                        <span class="subcategories-remove"></span>
+                                    </div>
+                                    <span class="modal-btn details" data-modal="#modal-2">Детали</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="categories-title-sub">Рекламные компании</div>
+                    <div class="categories-item">
+                        <span>Строительство домов</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <div class="select">
+                                <div class="select-head" data-type="firstOpt">Мгновенно</div>
+                                <div class="select-dropdown">
+                                    <div class="select-option" data-type="firstOpt">Мгновенно</div>
+                                    <div class="select-option" data-type="secondOpt">1 раз в день</div>
+                                    <div class="select-option" data-type="thirdOpt">Отключить</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categories-item">
+                        <span>Строительство домов</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                            <div class="select">
+                                <div class="select-head" data-type="firstOpt">Мгновенно</div>
+                                <div class="select-dropdown">
+                                    <div class="select-option" data-type="firstOpt">Мгновенно</div>
+                                    <div class="select-option" data-type="secondOpt">1 раз в день</div>
+                                    <div class="select-option" data-type="thirdOpt">Отключить</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <div class="categories-title">Уведомления по Телеграму</div>
+                    <div class="categories-item">
+                        <span>Новости</span>
+                        <div class="categories-part">
+                            <label class="switch">
+                                <input class="switch-check" type="checkbox" checked>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex form-button">
+                    <div class="form-reset">По умолчанию</div>
+                    <div class="form-save modal-btn" data-modal="#modal-1">Сохранить изменения</div>
+                </div>
+            </form>
+            <div id="modal-1" class="modal-window">
+                <div class="modal-wrap">
+                    <h3 class="modal-close">Да</h3>
+                    <h3 class="modal-close">Нет</h3>
+                    <a href="#" class="modal-close">Закрыть</a>
+                </div>
+            </div>
+            <div id="modal-2" class="modal-window">
+                <div class="modal-wrap">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet aspernatur atque doloribus, libero molestiae quidem rem sapiente soluta.</p>
+                    <a href="#" class="modal-close">Закрыть</a>
+                </div>
+            </div>
+            <div class="modal-back modal-hidden" id="modal-back"></div>
+        </div>
+    </main>
+</body>
+<script src="script/script.js"></script>
+</html>

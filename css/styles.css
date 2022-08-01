@@ -1,0 +1,356 @@
+:root{
+    --blue: #3861FB;
+    --main-color: #383838;
+    --inter:'Inter';
+    --roboto: 'Roboto', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    font-family: var(--roboto),Arial, Helvetica, sans-serif;
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p,h1,h2,h3{
+    margin: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch-check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #E4E4E4;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-check:checked + .switch-slider {
+    background-color: var(--blue);
+}
+
+.switch-check:checked + .switch-slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+
+
+
+.select {
+    position: relative;
+    font-size: 14px;
+    width: 225px;
+    height: 40px;
+    color: #858585;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+.select-head {
+    background: var(--blue);
+    padding: 11px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+}
+.select-head:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    border: 5px solid transparent;
+    border-top: 5px solid #B9B9BA;
+}
+.select-head.toggle {
+    border-radius: 3px 3px 0 0;
+}
+.select-head.toggle:after {
+    -webkit-transform: translateY(-50%) rotate(-135deg);
+    transform: translateY(-50%) rotate(-135deg);
+}
+.select-dropdown {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 1;
+    background: #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    visibility: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.select-option {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.select-option:hover {
+    background: #EBEBEB;
+}
+.select-dropdown.toggle {
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+
+.modal-window{
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%) scale(.9);
+    width: 520px;
+    max-width: 95%;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all .18s ease-in-out ;
+    visibility: hidden;
+    opacity: 0
+}
+
+.modal-window.modal-show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.modal-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    height: 100%;
+    min-height: inherit;
+}
+.modal-back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.modal-hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+.subcategories {
+    position: relative;
+    font-size: 12px;
+    display: block;
+    color: #707070;
+}
+.subcategories div:first-child{
+    padding: 5px 40px 5px 20px;
+    margin-right: 20px;
+    background-color: #EBEBEB;
+    border-radius: 4px ;
+}
+.subcategories-remove {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    cursor: pointer;
+}
+.subcategories-remove:after{
+    content: '';
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("/images/delete.svg");
+    position: absolute;
+    height: 10px;
+    width: 10px;
+
+}
+.flex{
+    display: flex ;
+}
+.details{
+    position: absolute;
+    top: 22px;
+    left: 420px;
+    font-size: 14px;
+    color:var(--blue);
+    cursor: pointer;
+}
+.details:after{
+    content: '';
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("/images/info.svg");
+    position: relative;
+    height: 16px;
+    width: 16px;
+
+}
+.form-button{
+    margin: 20px 0
+}
+.form-button div{
+    border-radius: 4px;
+    width: 213px;
+    padding: 17px 0;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.form-reset{
+    background-color:#F0F6FF;
+    color: var(--blue);
+}
+.form-save{
+    background-color: var(--blue);
+    color: white;
+}
+.categories{
+    margin-top: 60px;
+}
+.categories-title{
+    font-weight: bold;
+}
+.categories-title-sub{
+    font-size: 14px;
+    font-weight: bold;
+}
+.categories-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    margin: 30px 0;
+    font-size: 16px;
+}
+.categories-item > *{
+    width: 50%;
+}
+.categories-part{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 14px;
+}
+.categories-part > label{
+    margin-right: 4vw;
+}
+.categories-part> p{
+    max-width: 60%;
+}
+
+
+.note{
+    font-size: 14px;
+    color: #E4E4E4;
+    background-color: #222222;
+    border-radius: 10px;
+    width: 202px;
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    right: -210px;
+    text-align: center;
+    display: none;
+}
+.note::before, .block::after {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    border-right: 10px solid #222222;
+    left: -19px;
+    bottom: 15px;
+
+}
+.note::after {
+    border-top: 10px solid white;
+    bottom: -19px;
+}
+.note-icon{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 12px;
+    left: 160px;
+}
+.note-icon:hover .note{
+    display: block;
+}
+.title{
+    font-size: 60px;
+    font-family: var(--inter),Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.desc{
+    font-size: 22px;
+    font-family: var(--inter),Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 20px 0;
+}
